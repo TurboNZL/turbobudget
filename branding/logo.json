@@ -1,0 +1,33 @@
+{
+  "name": "TurboBudget",
+  "emblem": "bars",
+  "emblemColor": "#2f7bff",
+  "out": {
+    "svg": "public/icon.svg",
+    "png": [
+      [
+        "public/icon-512.png",
+        512
+      ],
+      [
+        "public/icon-192.png",
+        192
+      ],
+      [
+        "public/apple-touch-icon.png",
+        180
+      ]
+    ],
+    "symbolSvg": "public/favicon.svg",
+    "symbolPng": [
+      [
+        "public/favicon-32.png",
+        32
+      ],
+      [
+        "public/favicon-48.png",
+        48
+      ]
+    ]
+  }
+}

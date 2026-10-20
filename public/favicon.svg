@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="5" y="36" width="14" height="22" rx="3" fill="#3b82f6" fill-opacity=".72"/>
-  <rect x="25" y="24" width="14" height="34" rx="3" fill="#3b82f6" fill-opacity=".88"/>
-  <rect x="45" y="6" width="14" height="52" rx="3" fill="#3b82f6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="161.02 163.14 189.95 189.95" width="512" height="512" role="img" aria-label="TurboBudget">
+  <defs><linearGradient id="turbobudget-sym" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fb0ff"/><stop offset="1" stop-color="#0049c8"/></linearGradient></defs>
+  <path d="M171.2,287.8L177.56,281.44L211.48,281.44L217.84,287.8L217.84,336.56L171.2,336.56ZM232.68,241.16L239.04,234.8L272.96,234.8L279.32,241.16L279.32,336.56L232.68,336.56ZM294.16,186.04L300.52,179.68L334.44,179.68L340.8,186.04L340.8,336.56L294.16,336.56Z" fill="url(#turbobudget-sym)"/>
 </svg>

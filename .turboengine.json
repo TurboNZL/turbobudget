@@ -1,7 +1,12 @@
 {
-  "engine": { "repo": "TurboNZL/turboengine", "ref": "6b26f2431b58ea2f1d4cdd196d3860b86b2f736c" },
-  "modules": [],
+  "engine": {
+    "repo": "TurboNZL/turboengine",
+    "ref": "6b26f2431b58ea2f1d4cdd196d3860b86b2f736c"
+  },
+  "modules": [
+    "logos"
+  ],
   "themes": "on",
   "moved": {},
-  "notes": "Browser-only app (GitHub Pages / Vercel, no Electron, no server, no Android): the updaters, window-frame, editions, android-shell and release-pipeline modules do not apply. Only the themes package is used: package.json pins turbothemes to the engine commit above (path:/themes). The appearance module's files are Curator's (Layout.tsx, layouts.css, appearance.ts); this app has its own, smaller glue in src/lib/themes.ts and src/components/budget/AppearanceCard.tsx, so engine-diff would only report 'missing' for it on purpose."
+  "notes": "Browser-only app (GitHub Pages / Vercel, no Electron, no server, no Android): the updaters, window-frame, editions, android-shell and release-pipeline modules do not apply. Only the themes package is used: package.json pins turbothemes to the engine commit above (path:/themes). The appearance module's files are Curator's (Layout.tsx, layouts.css, appearance.ts); this app has its own, smaller glue in src/lib/themes.ts and src/components/budget/AppearanceCard.tsx, so engine-diff would only report 'missing' for it on purpose. logos: branding/logo.json + branding/emblems/bars.json (the three bars as the emblem, colour #2f7bff) generate public/icon.svg, icon-192/512.png, apple-touch-icon.png and favicon.svg/-32/-48 with scripts/gen-icons.mjs (the engine's, unchanged); the tab icon is still set from the theme in src/lib/brand.ts."
 }

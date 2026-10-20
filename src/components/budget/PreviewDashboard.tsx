@@ -5,7 +5,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { effectiveUi } from "turbothemes";
-import { brandDataUri } from "@/lib/brand";
 import { previewAttrs, previewStyle } from "@/lib/themes";
 import { getChartStyle, ChartDefs } from "./charts";
 import Segmented from "./Segmented";
@@ -33,7 +32,7 @@ export default function PreviewDashboard({ theme, ui: uiChoice }: { theme: strin
     >
       <header className="bt-top px-3 py-2 flex items-center justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
-          <img src={brandDataUri(theme, ui)} alt="" className="w-6 h-6" />
+          <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" className="w-6 h-6" />
           <span className="font-bold truncate">TurboBudget</span>
         </div>
         <div className="flex gap-2 pointer-events-none">
