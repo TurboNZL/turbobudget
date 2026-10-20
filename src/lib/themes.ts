@@ -1,24 +1,24 @@
 /**
  * The look of the app comes from the turbothemes engine (turbothemes, in github.com/TurboNZL/turboengine under themes/): palettes and UI styles live in that
- * repository and reach the app through its updater, so a theme fix never needs a BudgetTrack release. This file starts the engine
- * and gives React the little it needs; the choice is remembered by the engine under `budget-track.*` in localStorage.
+ * repository and reach the app through its updater, so a theme fix never needs a TurboBudget release. This file starts the engine
+ * and gives React the little it needs; the choice is remembered by the engine under `turbobudget.*` in localStorage.
  */
 import { useSyncExternalStore } from "react";
 import { effectiveUi, resolveTheme, start, themeStyle, type Appearance, type Hsl } from "turbothemes";
 import { applyFavicon } from "./brand";
 
-const PREFIX = "budget-track";
+const PREFIX = "turbobudget";
 
 /** Carries the choice made with the pre-turbothemes settings over once, so nobody's look resets on this update. */
 const migrateOldSettings = () => {
   try {
     const ls = window.localStorage;
     if (ls.getItem(`${PREFIX}.appearance`)) return;
-    const theme = ls.getItem("budget-track-theme");
-    const ui = ls.getItem("budget-track-ui-style");
+    const theme = ls.getItem("turbobudget-theme");
+    const ui = ls.getItem("turbobudget-ui-style");
     if (!theme && !ui) return;
-    const wp = JSON.parse(ls.getItem("budget-track-wallpaper") ?? "{}") as { enabled?: boolean; darkness?: number; custom?: boolean };
-    const image = ls.getItem("budget-track-wallpaper-image");
+    const wp = JSON.parse(ls.getItem("turbobudget-wallpaper") ?? "{}") as { enabled?: boolean; darkness?: number; custom?: boolean };
+    const image = ls.getItem("turbobudget-wallpaper-image");
     if (image) ls.setItem(`${PREFIX}.wallpaperImage`, image);
     const appearance: Appearance = {
       theme: theme ?? "dark",
@@ -28,7 +28,7 @@ const migrateOldSettings = () => {
       wallpaperCustom: wp.custom === true && !!image,
     };
     ls.setItem(`${PREFIX}.appearance`, JSON.stringify(appearance));
-    for (const k of ["budget-track-theme", "budget-track-ui-style", "budget-track-wallpaper", "budget-track-wallpaper-image"]) ls.removeItem(k);
+    for (const k of ["turbobudget-theme", "turbobudget-ui-style", "turbobudget-wallpaper", "turbobudget-wallpaper-image"]) ls.removeItem(k);
   } catch {
     // storage unavailable: the defaults apply
   }

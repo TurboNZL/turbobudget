@@ -23,7 +23,7 @@ import ConfirmDialog from "./ConfirmDialog";
 import IconButton from "./IconButton";
 import { cardCls, readStored, writeStored } from "./styles";
 
-const CHARTS_KEY = "budget-track-side-charts";
+const CHARTS_KEY = "turbobudget-side-charts";
 const PAGE = 100;
 
 type SortKey = "date" | "description" | "category" | "amount";

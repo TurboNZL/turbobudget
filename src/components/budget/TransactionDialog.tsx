@@ -10,8 +10,8 @@ import Segmented, { type SegmentedOption } from "./Segmented";
 import CategorySelect from "./CategorySelect";
 import { addDaysStr, readStored, todayStr, triggerCls, writeStored } from "./styles";
 
-const LAST_ACCOUNT = "budget-track-last-account";
-const LAST_TYPE = "budget-track-last-type";
+const LAST_ACCOUNT = "turbobudget-last-account";
+const LAST_TYPE = "turbobudget-last-type";
 
 export const TYPE_OPTIONS: SegmentedOption<Transaction["type"]>[] = [
   { value: "income", label: "Income", icon: Banknote, hint: "Money you earned (pay, freelance...)" },

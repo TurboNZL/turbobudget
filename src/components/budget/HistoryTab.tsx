@@ -15,7 +15,7 @@ import LedgerList from "./LedgerList";
 import StatTile from "./StatTile";
 import { cardCls, readStored, writeStored } from "./styles";
 
-const ACCOUNT_KEY = "budget-track-history-account";
+const ACCOUNT_KEY = "turbobudget-history-account";
 
 const blankTimeline = (accountId: number): Timeline => ({ accountId, applied: false, overrides: {}, dayOrder: {} });
 

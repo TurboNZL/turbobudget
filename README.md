@@ -1,4 +1,4 @@
-# BudgetTrack
+# TurboBudget
 
 A personal budgeting app that runs entirely in your browser: accounts, subscriptions, debts, interest, taxes, a history timeline and a lot of graphs. There is no server and no account. **Your data never leaves your device**; it is stored in `localStorage` and in `.db` files (JSON) you export yourself.
 
@@ -17,7 +17,7 @@ Built with React, TypeScript, Vite, Tailwind CSS, shadcn/ui and Recharts.
 
 ### Appearance
 
-The look comes from the `turbothemes` package in the [turboengine](https://github.com/TurboNZL/turboengine) repository (`themes/`; the old turbothemes repository is retired): 33 UI styles and 67 colour palettes (plus "Match this device" and "System"), in any combination, with a framed live preview and an optional wallpaper. Themes are plain JSON and CSS in `themes/`, and the app checks it in the background (at most every six hours) and picks up new or fixed themes without a BudgetTrack update. Settings > Appearance shows which set is in use and can check now or go back to the built-in set.
+The look comes from the `turbothemes` package in the [turboengine](https://github.com/TurboNZL/turboengine) repository (`themes/`; the old turbothemes repository is retired): 33 UI styles and 67 colour palettes (plus "Match this device" and "System"), in any combination, with a framed live preview and an optional wallpaper. Themes are plain JSON and CSS in `themes/`, and the app checks it in the background (at most every six hours) and picks up new or fixed themes without a TurboBudget update. Settings > Appearance shows which set is in use and can check now or go back to the built-in set.
 
 - The engine is started in `src/lib/themes.ts`; `tailwind.config.ts` points the shadcn colour names at the variables the palettes set, and the primitives in `src/components/ui` carry turbothemes' hook classes (`.btn`, `.input`, `.card`, `.bt-window`, `.bt-menu` ...). See turboengine's `themes/docs/CONTRACT.md`.
 - Chart colours are derived from the palette's accent in `src/lib/themes.ts`.
