@@ -20,8 +20,8 @@ import BrandMark from "@/components/budget/BrandMark";
 import ConfirmDialog from "@/components/budget/ConfirmDialog";
 import { readStored, writeStored } from "@/components/budget/styles";
 
-const LOADED_FILE_KEY = "budget-track-loaded-file";
-const TAB_KEY = "budget-track-tab";
+const LOADED_FILE_KEY = "turbobudget-loaded-file";
+const TAB_KEY = "turbobudget-tab";
 
 const TABS = [
   ["accounts", "Accounts", Wallet],
@@ -60,7 +60,7 @@ export default function Index() {
   const handleExport = async () => {
     try {
       const data = await databaseService.exportData();
-      databaseService.downloadDatabase(data, `budget-track-${new Date().toISOString().split("T")[0]}.db`);
+      databaseService.downloadDatabase(data, `turbobudget-${new Date().toISOString().split("T")[0]}.db`);
       showSuccess("Database exported successfully");
     } catch {
       showError("Failed to export database");
@@ -98,7 +98,7 @@ export default function Index() {
             <div className="flex items-center gap-3 min-w-0">
               <BrandMark />
               <div className="min-w-0">
-                <h1 className="text-2xl font-bold leading-tight">BudgetTrack</h1>
+                <h1 className="text-2xl font-bold leading-tight">TurboBudget</h1>
                 <p className="text-xs text-muted-foreground flex items-center gap-1 truncate">
                   <FileText className="w-3 h-3 shrink-0" />
                   {loadedFileName ? `Loaded: ${loadedFileName}` : "No file loaded · changes are saved in this browser"}
@@ -131,7 +131,7 @@ export default function Index() {
       <ConfirmDialog
         open={unloadOpen}
         title="Unload the current database?"
-        description="This clears all accounts, transactions, subscriptions, debts, interest, taxes, history timelines and exchange rates from this browser and returns BudgetTrack to a blank state. Export a .db file first if you want to keep your data."
+        description="This clears all accounts, transactions, subscriptions, debts, interest, taxes, history timelines and exchange rates from this browser and returns TurboBudget to a blank state. Export a .db file first if you want to keep your data."
         confirmLabel="Unload"
         onConfirm={handleUnload}
         onCancel={() => setUnloadOpen(false)}

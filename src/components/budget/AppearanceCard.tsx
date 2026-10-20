@@ -136,7 +136,7 @@ export default function AppearanceCard() {
           <div className="space-y-2 border-t border-border pt-4">
             <h4 className="text-sm font-medium">Themes</h4>
             <p className="text-xs text-muted-foreground">
-              Colours and styles come from the TurboNZL/turboengine repository (themes/) and update on their own, with no BudgetTrack update needed.
+              Colours and styles come from the TurboNZL/turboengine repository (themes/) and update on their own, with no TurboBudget update needed.
               Now using the {version.origin === "downloaded" ? "downloaded" : "built-in"} set <span className="tabular-nums">({version.hash.slice(0, 8)})</span>, built {version.built}.
             </p>
             <div className="flex flex-wrap gap-2">

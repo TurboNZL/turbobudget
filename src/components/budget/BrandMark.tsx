@@ -3,7 +3,7 @@ import { brandDataUri } from "@/lib/brand";
 import { useAppearance } from "@/lib/themes";
 import { cn } from "@/lib/utils";
 
-/** The logo. Drawn from the same SVG as the favicon, in the selected colour theme and UI style. */
+/** The logo: the bars on a tile, in the selected colour theme and UI style. (The browser tab shows the bars alone, see lib/brand.ts.) */
 export default function BrandMark({ className }: { className?: string }) {
   const { theme, ui } = useAppearance();
   const src = useMemo(() => brandDataUri(theme, ui), [theme, ui]);

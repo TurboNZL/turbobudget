@@ -229,7 +229,7 @@ function defaultSettings(): Settings {
   return { exchangeRates: { ...DEFAULT_RATES }, rwtRate: DEFAULT_RWT_RATE, interestBasis: "monthly" };
 }
 
-const STORAGE_KEY = "budget-track-data";
+const STORAGE_KEY = "turbobudget-data";
 const STORAGE_VERSION = 4;
 const DEFAULT_RWT_RATE = 10.5;
 
@@ -1106,7 +1106,7 @@ export const databaseService = {
     persistState();
   },
 
-  downloadDatabase(data: DatabaseExport, filename = "budget-track.db") {
+  downloadDatabase(data: DatabaseExport, filename = "turbobudget.db") {
     try {
       const json = JSON.stringify(data, null, 2);
       const blob = new Blob([json], { type: "application/json" });
@@ -1131,7 +1131,7 @@ export const databaseService = {
   },
 };
 
-export const downloadDatabase = (data: DatabaseExport, filename = "budget-track.db") => {
+export const downloadDatabase = (data: DatabaseExport, filename = "turbobudget.db") => {
   databaseService.downloadDatabase(data, filename);
 };
 

@@ -43,7 +43,7 @@ import MoreCharts from "./MoreCharts";
 import { ChartDefs, useChartStyle } from "./charts";
 import AccountCharts from "./AccountCharts";
 
-const FILTER_KEY = "budget-track-graph-account";
+const FILTER_KEY = "turbobudget-graph-account";
 
 const axisMoney = (v: number) => (Math.abs(v) >= 1000 ? `${Math.round(v / 100) / 10}k` : String(v));
 
